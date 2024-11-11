@@ -1,0 +1,38 @@
+# Archivo pyproject.toml
+
+[tool.poetry]
+name = "obesity-clustering-analysis"
+version = "0.1.0"
+description = "Ejerccio de analisis de clusters con los datos Obesidad"
+authors = ["Nicolas torres <nicolas20.manaher@gmail.com>"]
+license = "MIT"
+readme = "README.md"  # Define el archivo README como documentación del proyecto
+homepage = "https://github.com/Nicolas20Torres/Proyecto_3.git"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.2"
+scikit-learn = "^1.5.1"
+seaborn = "^0.13.2"
+matplotlib = "^3.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+black = "^21.5b1"  # Formateador de código
+flake8 = "^3.9"    # Herramienta de linting para cumplir con PEP 8
+mypy = "^0.812"    # Para comprobación de tipos estáticos
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+
+[tool.flake8]
+max-line-length = 88
+ignore = [
+    "E203",  # Espaciado antes de ':' en f-strings
+    "W503"   # Línea continua antes de operadores binarios
+]
+|
